@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Scarpe_ecommerce.Models.Articoli>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi articolo", "Create")
+</p>
+<table class="table">
+    <tr>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.NomeArticolo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.imgCopertina)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+   
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeArticolo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezzo)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.imgCopertina)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "detagliArticolo", new { ID=item.IDarticolo}) |
+            @Html.ActionLink("Delete", "Delete", new { ID = item.IDarticolo })
+        </td>
+    </tr>
+}
+
+</table>

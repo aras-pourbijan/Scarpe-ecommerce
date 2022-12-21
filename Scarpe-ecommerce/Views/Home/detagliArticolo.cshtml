@@ -1,0 +1,70 @@
+﻿@model Scarpe_ecommerce.Models.Articoli
+
+@{
+    ViewBag.Title = "detagliArticolo";
+}
+
+<h2>detagliArticolo</h2>
+
+<div>
+    <h4>Articoli</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.IDarticolo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeArticolo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeArticolo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezzo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imgCopertina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imgCopertina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMG1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMG1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMG2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMG2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
